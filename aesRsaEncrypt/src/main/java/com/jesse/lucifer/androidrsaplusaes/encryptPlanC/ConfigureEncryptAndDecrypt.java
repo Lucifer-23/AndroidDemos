@@ -1,4 +1,4 @@
-package com.jesse.lucifer.androidrsaplusaes.encrypt;
+package com.jesse.lucifer.androidrsaplusaes.encryptPlanC;
 
 public class ConfigureEncryptAndDecrypt {
     public static final String CHAR_ENCODING = "UTF-8";

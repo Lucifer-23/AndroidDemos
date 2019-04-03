@@ -9,9 +9,13 @@
 /build
 /captures
 .externalNativeBuild
-
 .idea/
-gradle/
+
+aesRsaEncrypt/gradle/
+aesRsaEncrypt/gradlew
+aesRsaEncrypt/gradlew.bat
+aesRsaEncrypt/local.properties
 gradle.properties
+gradle/
 gradlew
 gradlew.bat

@@ -1,4 +1,4 @@
-package com.jesse.lucifer.androidrsaplusaes.encrypt;
+package com.jesse.lucifer.androidrsaplusaes.encryptPlanC;
 
 import android.util.Log;
 
@@ -8,6 +8,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 public class Digest {
+    public static final String TAG = "Digest";
     public static final String ENCODE = "UTF-8";
 
     public static String signMD5(String aValue, String encoding) {
@@ -16,10 +17,10 @@ public class Digest {
             MessageDigest md = MessageDigest.getInstance("MD5");
             return ConvertUtils.toHex(md.digest(input));
         } catch (NoSuchAlgorithmException e) {
-            Log.e("Digest", e.getMessage(), e);
+            Log.e(TAG, e.getMessage(), e);
             return null;
         } catch (UnsupportedEncodingException e) {
-            Log.e("Digest", e.getMessage(), e);
+            Log.e(TAG, e.getMessage(), e);
             return null;
         }
     }
@@ -30,7 +31,7 @@ public class Digest {
             MessageDigest md = MessageDigest.getInstance("MD5");
             return ConvertUtils.toHex(md.digest(input));
         } catch (NoSuchAlgorithmException e) {
-            Log.e("Digest", e.getMessage(), e);
+            Log.e(TAG, e.getMessage(), e);
             return null;
         }
     }
@@ -62,7 +63,7 @@ public class Digest {
         try {
             md = MessageDigest.getInstance("MD5");
         } catch (NoSuchAlgorithmException e) {
-            Log.e("Digest", e.getMessage(), e);
+            Log.e(TAG, e.getMessage(), e);
             return null;
         }
         md.update(k_ipad);
@@ -98,7 +99,7 @@ public class Digest {
         try {
             md = MessageDigest.getInstance("SHA");
         } catch (NoSuchAlgorithmException e) {
-            Log.e("Digest", e.getMessage(), e);
+            Log.e(TAG, e.getMessage(), e);
             return null;
         }
         md.update(k_ipad);
@@ -128,7 +129,7 @@ public class Digest {
         try {
             md = MessageDigest.getInstance("SHA");
         } catch (NoSuchAlgorithmException e) {
-            Log.e("Digest", e.getMessage(), e);
+            Log.e(TAG, e.getMessage(), e);
             return null;
         }
         return ConvertUtils.toHex(md.digest(value));
@@ -147,7 +148,7 @@ public class Digest {
         try {
             md = MessageDigest.getInstance(alg);
         } catch (NoSuchAlgorithmException e) {
-            Log.e("Digest", e.getMessage(), e);
+            Log.e(TAG, e.getMessage(), e);
             return null;
         }
         return ConvertUtils.toHex(md.digest(value));

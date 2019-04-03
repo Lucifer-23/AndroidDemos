@@ -1,4 +1,4 @@
-package com.jesse.lucifer.androidrsaplusaes.encrypt;
+package com.jesse.lucifer.androidrsaplusaes.encryptPlanC;
 
 import java.security.MessageDigest;
 
