@@ -3,11 +3,8 @@ package com.jesse.lucifer.androidrsaplusaes.encrypt;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.jesse.lucifer.androidrsaplusaes.encryptPlanC.GsonTools;
-
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.TreeMap;
 
 public class EncryptUtil {
@@ -17,7 +14,7 @@ public class EncryptUtil {
     public static String handleRSA(TreeMap<String, Object> map,
                                    String privateKey) {
         StringBuffer sbuffer = new StringBuffer();
-        for (Entry<String, Object> entry : map.entrySet()) {
+        for (Map.Entry<String, Object> entry : map.entrySet()) {
             sbuffer.append(entry.getValue());
         }
         String signTemp = sbuffer.toString();
@@ -32,14 +29,10 @@ public class EncryptUtil {
     /**
      * 返回的结果进行验签
      *
-     * @param data
-     *            业务数据密文
-     * @param encrypt_key
-     *            对ybAesKey加密后的密文
-     * @param clientPublicKey
-     *            客户端公钥
-     * @param serverPrivateKey
-     *            服务器私钥
+     * @param data             业务数据密文
+     * @param encrypt_key      对ybAesKey加密后的密文
+     * @param clientPublicKey  客户端公钥
+     * @param serverPrivateKey 服务器私钥
      * @return 验签是否通过
      * @throws Exception
      */
@@ -67,9 +60,9 @@ public class EncryptUtil {
 
         /** 4.对map中的值进行验证 */
         StringBuffer signData = new StringBuffer();
-        Iterator<Entry<String, String>> iter = map.entrySet().iterator();
+        Iterator<Map.Entry<String, String>> iter = map.entrySet().iterator();
         while (iter.hasNext()) {
-            Entry<String, String> entry = iter.next();
+            Map.Entry<String, String> entry = iter.next();
 
             /** 把sign参数隔过去 */
             if (TextUtils.equals((String) entry.getKey(), "sign")) {
@@ -90,7 +83,7 @@ public class EncryptUtil {
      */
     public static String handleHmac(TreeMap<String, String> map, String hmacKey) {
         StringBuffer sbuffer = new StringBuffer();
-        for (Entry<String, String> entry : map.entrySet()) {
+        for (Map.Entry<String, String> entry : map.entrySet()) {
             sbuffer.append(entry.getValue());
         }
         String hmacTemp = sbuffer.toString();

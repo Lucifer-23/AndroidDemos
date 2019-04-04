@@ -1,4 +1,4 @@
-package com.jesse.lucifer.androidrsaplusaes.encryptPlanC;
+package com.jesse.lucifer.androidrsaplusaes.encrypt;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -92,4 +92,6 @@ public class GsonTools {
         }
         return true;
     }
+
+
 }

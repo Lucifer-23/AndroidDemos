@@ -46,6 +46,8 @@ import java.util.Map;
 import javax.crypto.Cipher;
 
 public class RSA {
+
+    public static final String TAG = "RSA";
     /**
      * 指定key的大小
      */
@@ -185,8 +187,9 @@ public class RSA {
             return bverify;
 
         } catch (Exception e) {
-            Log.e("RSA", e.getMessage(), e);
+            Log.e(TAG, e.getMessage(), e);
         }
         return false;
     }
+
 }
