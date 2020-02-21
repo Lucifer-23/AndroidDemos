@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jesse.lucifer.activitylaunchmodeflag">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SingleTaskLaunchModeActivityA"
+            android:exported="true"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".SingleTaskLaunchModeActivityB"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".StandardLaunchModeActivityA"
+            android:exported="true" />
+
+        <activity android:name=".StandardLaunchModeActivityC" />
+
+        <activity
+            android:name=".StandardLaunchModeCustomAffinityActivityB"
+            android:taskAffinity="com.jesse.lucifer.activitylaunchmodeflag.custom" />
+
+        <activity
+            android:name=".SingleTopLaunchModeActivityA"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".SingleInstanceLaunchModeActivityA"
+            android:exported="true"
+            android:launchMode="singleInstance" />
+
+        <activity
+            android:name=".SingleInstanceLaunchModeActivityB"
+            android:launchMode="singleInstance" />
+    </application>
+</manifest>

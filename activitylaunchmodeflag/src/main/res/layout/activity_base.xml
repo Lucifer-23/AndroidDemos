@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dimen_20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/id_base_activity_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:gravity="left|center_vertical"
+        android:padding="@dimen/dimen_5dp"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="@dimen/dimen_15sp" />
+
+    <Button
+        android:id="@+id/id_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:text="启动launchMode为standard的StandardLaunchModeActivityA" />
+
+    <Button
+        android:id="@+id/id_base_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:text="启动launchMode为standard的Custom Affinity的StandardLaunchModeActivityB" />
+
+    <Button
+        android:id="@+id/id_base_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:text="启动launchMode为standard的StandardLaunchModeActivityC" />
+
+    <Button
+        android:id="@+id/id_base_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:text="启动launchMode为singleTop的SingleTopLaunchModeActivityA" />
+
+    <Button
+        android:id="@+id/id_base_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:text="启动launchMode为singleInstance的SingleInstanceLaunchModeActivityA" />
+
+    <Button
+        android:id="@+id/id_base_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:text="启动launchMode为singleTask的SingleTaskLaunchModeActivityA" />
+</LinearLayout>
